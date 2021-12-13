@@ -1,0 +1,58 @@
+.wrapper {
+  /* Grid items should expand w/ aspect ratio if with is specified */
+  // width: 500px;
+}
+
+.header {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  button {
+    all: unset;
+
+    &:hover {
+      background: red;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid: auto-flow 1fr / repeat(7, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.date {
+  all: unset;
+  border-radius: 5px;
+
+  &.today {
+    border: 2px solid pink;
+  }
+
+  &[disabled] {
+    opacity: .3;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: #ababae;
+  }
+}
+
+.date, .pad-date, .weekday {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.weekday {
+  font-weight: bold;
+}
